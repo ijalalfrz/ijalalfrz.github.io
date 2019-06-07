@@ -17,6 +17,13 @@
 	        s0.node.setAttribute('class', 'state q0');
 	        var t0 = r.text(40, top + 0, "q0").attr({ "font-size": 15});
 			t0.node.setAttribute('class', 'text q0');
+
+						
+	        var sa = r.circle(40, top + 100, 20);
+	        sa.node.setAttribute('class', 'state acc');
+	        var ta = r.text(40, top + 100, "true").attr({ "font-size": 15});
+			ta.node.setAttribute('class', 'text acc');
+			
 			
 			//a
 			var s1 = r.circle(200, top - 100, 20);
@@ -52,6 +59,7 @@
 			
 			//arrow
 			s0.joint(s1, {label: 'a / x, R', attrs: {'stroke-dasharray': 'none'}});
+			s0.joint(sa, {label: 'x / x, L', attrs: {'stroke-dasharray': 'none'}});
 			s0.joint(s4, {label: 'b / x, R', attrs: {'stroke-dasharray': 'none'}});
 
 			s1.joint(s2, {label: 'x / x, L', attrs: {'stroke-dasharray': 'none'}});
